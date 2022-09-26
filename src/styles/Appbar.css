@@ -1,7 +1,6 @@
 /* ----------------------------------------------------------------------
                                                                       Appbar --------------------------------------------------------- */
 
-
 .MuiPaper-root.MuiPaper-elevation.MuiPaper-elevation4.MuiAppBar-root.MuiAppBar-colorPrimary.MuiAppBar-positionStatic.css-hip9hq-MuiPaper-root-MuiAppBar-root {
   background-color: transparent !important;
   padding: 1%;
@@ -86,10 +85,8 @@
   z-index: 100;
 }
 
-
 /* ----------------------------------------------------------------------
                                                                       Drawer --------------------------------------------------------- */
-
 
 /* drawer list items */
 .drawer-logo-link {
@@ -98,11 +95,11 @@
 }
 
 /* drawer list item default padding */
-.MuiListItem-root.MuiListItem-gutters.MuiListItem-padding.css-1p823my-MuiListItem-root{
+.MuiListItem-root.MuiListItem-gutters.MuiListItem-padding.css-1p823my-MuiListItem-root {
   padding: 0 !important;
 }
 
-.drawer-link{
+.drawer-link {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -112,8 +109,8 @@
   border-radius: 10px;
 }
 
-.drawer-link.active{
-  background-color: rgb(190, 156, 121, .5) !important;
+.drawer-link.active {
+  background-color: rgb(190, 156, 121, 0.5) !important;
 }
 
 /* Drawer list items */
@@ -141,24 +138,22 @@
   transform: translate(0, 0) !important;
   position: relative !important;
   background-color: #262626 !important;
-  color: white !important
+  color: white !important;
 }
 
 /* Drawer bg image */
 .MuiPaper-root.MuiPaper-elevation.MuiPaper-elevation16.MuiDrawer-paper.MuiDrawer-paperAnchorLeft.css-4t3x6l-MuiPaper-root-MuiDrawer-paper {
-  background-image: url("../../public/images/bg-images/canvas-bg.jpeg");
+  background-image: url("../../public/images/bg-images/canvas-bg.jpeg") !important;
   background-position: right;
   background-size: cover;
 }
 
-
 /* ---------------------------------------------------------------------
                                                                     Responsive ------------------------------------------------------- */
 
-
 @media only screen and (max-width: 899px) {
   /* Hide brand logo */
-  .MuiTypography-root.MuiTypography-h6.css-fs2cdh-MuiTypography-root img{
+  .MuiTypography-root.MuiTypography-h6.css-fs2cdh-MuiTypography-root img {
     display: none;
   }
 }
