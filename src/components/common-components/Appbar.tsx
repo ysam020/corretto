@@ -17,7 +17,6 @@ import {
   ListItemIcon,
   Toolbar,
   Button,
-  Badge,
   Slide,
   Typography,
 } from "@mui/material";
@@ -34,6 +33,33 @@ import {
 const drawerWidth = "70%";
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
+    appbar: {
+      backgroundColor: "transparent !important",
+      padding: "3vh 0 !important",
+    },
+    appbarLinks: {
+      fontSize: "15px !important",
+      fontFamily: "Marcellus !important",
+      // textTransform: "uppercase !important",
+      color: "white !important",
+      letterSpacing: "2px !important",
+      lineHeight: "23px !important",
+      // fontWeight: "400",
+      textDecoration: "none !important",
+      transition: "all 0.3s !important",
+      // position: "relative !important",
+      padding: "10px 0 !important",
+      minWidth: "auto !important",
+    },
+    appbarToggle: {
+      position: "fixed !important",
+      top: "1% !important",
+      right: "-2% !important",
+      backgroundColor: "rgba(0, 0, 0, 0.8) !important",
+      borderRadius: "4px !important",
+      padding: "10px !important",
+      // zIndex: 100,
+    },
     logo: {
       maxWidth: 100,
       marginRight: "10px",
@@ -42,9 +68,12 @@ const useStyles = makeStyles((theme: Theme) =>
       width: "100% !important",
       padding: "50px !important",
     },
+    drawerListItem: {
+      padding: "0 !important",
+    },
     drawerIcons: {
       color: "#1e1e1e !important",
-      minWidth: "0 !important"
+      minWidth: "0 !important",
     },
     drawerText: {
       fontSize: "18px !important",
@@ -101,17 +130,17 @@ export default function DrawerAppBar(props: Props) {
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
       <List>
-        <ListItem>
+        <ListItem className={classes.drawerListItem}>
           <NavLink to="/" className="drawer-logo-link ">
-            <img src="/images/logo-dark.png" className = {classes.drawerLogo} />
+            <img src="/images/logo-dark.png" className={classes.drawerLogo} />
           </NavLink>
         </ListItem>
 
-        <Divider className = {classes.divider} />
+        <Divider className={classes.divider} />
 
-        <ListItem>
+        <ListItem className={classes.drawerListItem}>
           <NavLink to="/" className="drawer-link">
-            <ListItemIcon className = {classes.drawerIcons} >
+            <ListItemIcon className={classes.drawerIcons}>
               <Home />
             </ListItemIcon>
             <ListItemButton sx={{ textAlign: "left" }} className="appbar-links">
@@ -123,9 +152,9 @@ export default function DrawerAppBar(props: Props) {
           </NavLink>
         </ListItem>
 
-        <ListItem>
+        <ListItem className={classes.drawerListItem}>
           <NavLink to="/about" className="drawer-link">
-            <ListItemIcon className = {classes.drawerIcons} >
+            <ListItemIcon className={classes.drawerIcons}>
               <Diversity1 />
             </ListItemIcon>
             <ListItemButton sx={{ textAlign: "left" }} className="appbar-links">
@@ -137,9 +166,9 @@ export default function DrawerAppBar(props: Props) {
           </NavLink>
         </ListItem>
 
-        <ListItem>
+        <ListItem className={classes.drawerListItem}>
           <NavLink to="/menu" className="drawer-link">
-            <ListItemIcon className = {classes.drawerIcons} >
+            <ListItemIcon className={classes.drawerIcons}>
               <Dining />
             </ListItemIcon>
             <ListItemButton sx={{ textAlign: "left" }} className="appbar-links">
@@ -151,9 +180,9 @@ export default function DrawerAppBar(props: Props) {
           </NavLink>
         </ListItem>
 
-        <ListItem>
+        <ListItem className={classes.drawerListItem}>
           <NavLink to="/contact" className="drawer-link">
-            <ListItemIcon className = {classes.drawerIcons} >
+            <ListItemIcon className={classes.drawerIcons}>
               <ContactPage />
             </ListItemIcon>
             <ListItemButton sx={{ textAlign: "left" }} className="appbar-links">
@@ -165,9 +194,9 @@ export default function DrawerAppBar(props: Props) {
           </NavLink>
         </ListItem>
 
-        <ListItem>
+        <ListItem className={classes.drawerListItem}>
           <NavLink to="/shop" className="drawer-link">
-            <ListItemIcon className = {classes.drawerIcons} >
+            <ListItemIcon className={classes.drawerIcons}>
               <LocalMall />
             </ListItemIcon>
             <ListItemButton>
@@ -180,20 +209,18 @@ export default function DrawerAppBar(props: Props) {
         </ListItem>
       </List>
 
-      <Divider className = {classes.divider} />
+      <Divider className={classes.divider} />
 
-      <ListItem>
+      <ListItem className={classes.drawerListItem}>
         <NavLink to="/cart" className="drawer-link">
-          <ListItemIcon className = {classes.drawerIcons} >
+          <ListItemIcon className={classes.drawerIcons}>
             <ShoppingCart />
           </ListItemIcon>
           <ListItemButton>
-            <Badge showZero badgeContent={cart.length} color="secondary">
-              <ListItemText
-                primary="Cart"
-                classes={{ primary: classes.drawerText }}
-              />
-            </Badge>
+            <ListItemText
+              primary="Cart"
+              classes={{ primary: classes.drawerText }}
+            />
           </ListItemButton>
         </NavLink>
       </ListItem>
@@ -207,7 +234,7 @@ export default function DrawerAppBar(props: Props) {
   return (
     <div className="appbar">
       <Box sx={{ display: "flex" }}>
-        <AppBar position="static" component="nav">
+        <AppBar position="static" component="nav" className={classes.appbar}>
           <Toolbar>
             <HideOnScroll {...props}>
               <IconButton
@@ -219,6 +246,7 @@ export default function DrawerAppBar(props: Props) {
                   mr: 2,
                   display: { xs: "block", sm: "block", md: "none" },
                 }}
+                className={classes.appbarToggle}
               >
                 <Menu />
               </IconButton>
@@ -237,34 +265,38 @@ export default function DrawerAppBar(props: Props) {
 
             <Box sx={{ display: { xs: "none", sm: "none", md: "block" } }}>
               <NavLink to="/" className="appbar-link">
-                <Button sx={{ color: "#fff" }}>HOME</Button>
+                <Button sx={{ color: "#fff" }} className={classes.appbarLinks}>
+                  HOME
+                </Button>
               </NavLink>
 
               <NavLink to="/about" className="appbar-link">
-                <Button sx={{ color: "#fff" }}>ABOUT US</Button>
+                <Button sx={{ color: "#fff" }} className={classes.appbarLinks}>
+                  ABOUT US
+                </Button>
               </NavLink>
 
               <NavLink to="/menu" className="appbar-link">
-                <Button sx={{ color: "#fff" }}>MENU</Button>
+                <Button sx={{ color: "#fff" }} className={classes.appbarLinks}>
+                  MENU
+                </Button>
               </NavLink>
 
               <NavLink to="/contact" className="appbar-link">
-                <Button sx={{ color: "#fff" }}>CONTACT</Button>
+                <Button sx={{ color: "#fff" }} className={classes.appbarLinks}>
+                  CONTACT
+                </Button>
               </NavLink>
 
               <NavLink to="/shop" className="appbar-link">
-                <Button sx={{ color: "#fff" }}>SHOP</Button>
+                <Button sx={{ color: "#fff" }} className={classes.appbarLinks}>
+                  SHOP
+                </Button>
               </NavLink>
 
               <NavLink to="/cart" className="appbar-cart-link">
-                <Button sx={{ color: "#fff" }}>
-                  <Badge
-                    showZero
-                    badgeContent={cart.length}
-                    className="appbar-badge"
-                  >
-                    <ShoppingCart />
-                  </Badge>
+                <Button sx={{ color: "#fff" }} className={classes.appbarLinks}>
+                  <ShoppingCart />
                 </Button>
               </NavLink>
             </Box>
@@ -285,6 +317,9 @@ export default function DrawerAppBar(props: Props) {
               "& .MuiDrawer-paper": {
                 boxSizing: "border-box",
                 width: drawerWidth,
+                backgroundImage: `url('/images/bg-images/canvas-bg.jpeg')`,
+                backgroundPosition: "right",
+                backgroundSize: "cover",
               },
             }}
           >
