@@ -1,0 +1,115 @@
+.checkout-form-container {
+  background-color: whitesmoke;
+}
+
+.checkout-form-inner-container {
+  width: 90% !important;
+  margin: 5% auto !important;
+  background-color: white;
+}
+
+.input-field-col {
+  margin-bottom: 25px !important;
+  padding: 0 !important;
+}
+
+/* Form */
+.checkout-form-inner-container form {
+  padding: 50px;
+  overflow: hidden;
+}
+
+.input-field-row h2 {
+  color: #262626;
+  font-family: Marcellus;
+  font-size: 30px;
+  letter-spacing: 2px;
+  line-height: 1.55em;
+  margin-top: 35px;
+  font-weight: 400;
+}
+
+.input-field-row p {
+  color: #262626;
+  font-size: 12px;
+  letter-spacing: 1px;
+  line-height: 1.55em;
+  font-weight: 300;
+  color: #656565;
+}
+
+.input-field-container {
+  display: flex;
+  justify-content: center;
+}
+
+.input-field-icon {
+  color: #be9c79;
+  min-width: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-i4bv87-MuiSvgIcon-root {
+  font-size: 40px;
+  position: relative;
+}
+
+.input-field-input {
+  flex-grow: 1;
+}
+
+.input-field-input input,
+.input-field-input select {
+  padding: 15px;
+  width: 100%;
+  outline: none;
+}
+
+.checkout-form-field {
+  padding: 15px;
+  border: 1px solid gray;
+  outline: none;
+  width: 100%;
+}
+
+.checkout-form-submit-btn {
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  line-height: 60px;
+  font-weight: 600;
+  text-transform: uppercase;
+  background-color: #be9c79;
+  border: none;
+  color: white;
+  padding: 0 35px;
+  transition: all 0.3s;
+  width: 100%;
+  margin-top: 50px;
+}
+
+/* Responsive */
+@media only screen and (max-width: 992px) {
+  .checkout-form-inner-container {
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .checkout-form-container form {
+    width: 100%;
+    margin: 50px auto 0 auto;
+    padding: 0 30px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .input-field-icon {
+    min-width: 40px;
+  }
+
+  .MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.css-i4bv87-MuiSvgIcon-root {
+    font-size: 25px;
+  }
+}

@@ -1,0 +1,606 @@
+* {
+  overflow-x: hidden;
+}
+
+/* -------------------------------------------------------------
+                                                      Section 1- Home Banner --------------------------------------------------------- */
+
+.hero {
+  background-image: url("../../public/images/bg-images/home-bg.jpeg");
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.hero-container {
+  padding: 8vh 0;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+/* home banner content */
+.hero-content {
+  animation-name: Animation;
+  animation-duration: 1s;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-content h1 {
+  text-transform: uppercase;
+  font-family: Marcellus;
+  font-size: 100px;
+  line-height: 150px;
+  letter-spacing: 5px;
+  font-weight: "400";
+  color: white;
+  overflow: hidden;
+}
+
+.hero-content p {
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 300;
+  color: white;
+  letter-spacing: 2px;
+  padding: 30px;
+}
+
+/* banner button */
+.hero-btn {
+  text-transform: uppercase;
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 23px 50px;
+  border-radius: 0;
+  background-color: transparent;
+  border: 1px solid white;
+  line-height: 1.15em;
+  letter-spacing: 0.15em;
+  margin-bottom: 5em;
+  transition: all 0.3s;
+}
+
+.hero-btn:hover {
+  background-color: #be9c79;
+  border: 1px solid #be9c79;
+}
+
+/*animation */
+@keyframes Animation {
+  from {
+    transform: translateY(80px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* responsive */
+@media only screen and (max-width: 1100px) {
+  .hero-container {
+    width: 100%;
+  }
+
+  .hero-content h1 {
+    font-size: 80px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .hero-content h1 {
+    font-size: 60px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .hero-container {
+    width: 100%;
+    padding: 5vh 0;
+  }
+
+  /* home banner carousel content */
+  .hero-content {
+    animation-name: carouselAnimation;
+    animation-duration: 1s;
+    text-align: center;
+  }
+
+  .hero-content p {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 300;
+    color: white;
+    letter-spacing: 2px;
+    padding: 30px;
+  }
+
+  /* banner button */
+  .hero-btn {
+    text-transform: uppercase;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 23px 50px;
+    background-color: transparent;
+    border: 1px solid white;
+    line-height: 1.15em;
+    letter-spacing: 0.15em;
+    margin-bottom: 5em;
+    transition: all 0.3s;
+  }
+
+  .hero-btn:hover {
+    background-color: #be9c79;
+    border: 1px solid #be9c79;
+  }
+}
+
+/* -------------------------------------------------------------
+                                                            Section 2 ---------------------------------------------------------------- */
+
+.section-2 {
+  display: flex;
+  padding: 50px 0;
+  overflow: hidden;
+}
+
+.section-2 .center-col {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.center-col img {
+  width: 100%;
+}
+
+.section-2 .left-col {
+  padding: 100px 0;
+  padding-left: 30px;
+}
+
+.section-2 .right-col {
+  padding: 100px 0;
+  padding-right: 30px;
+}
+
+.section-2 .right-col .row-1,
+.section-2 .right-col .row-2,
+.section-2 .right-col .row-3 {
+  display: none;
+}
+
+/* Left Icon Component */
+.icon-content{
+  display: flex;
+  padding: 20px 0;
+}
+
+.left-icon-text h3{
+  color: #262626;
+  font-family: Marcellus;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.5em;
+  letter-spacing: 1px;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.left-icon-text p{
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 26px;
+  color: #656565;
+  text-align: left;
+  padding-left: 20px;
+}
+
+.icon-content .icon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* border: 1px solid red; */
+}
+
+/* Right Icon Component */
+.icon-content{
+  display: flex;
+  padding: 20px 0;
+}
+
+.right-icon-text h3{
+  color: #262626;
+  font-family: Marcellus;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.5em;
+  letter-spacing: 1px;
+  text-align: right;
+  padding-right: 20px;
+}
+
+.right-icon-text p{
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 26px;
+  color: #656565;
+  text-align: right;
+  padding-right: 20px;
+}
+
+.icon-content .icon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive */
+@media only screen and (max-width: 768px) {
+  .section-2 {
+    display: block;
+    padding: 0 50px;
+  }
+
+  .section-2 .left-col {
+    display: none;
+  }
+
+  .section-2 .center-col {
+    display: none;
+  }
+
+  .section-2 .right-col {
+    padding: 50px 0;
+  }
+
+  .section-2 .right-col .row-1,
+  .section-2 .right-col .row-2,
+  .section-2 .right-col .row-3 {
+    display: block;
+  }
+}
+
+/* -------------------------------------------------------------
+                                                    Section 3: Blog Section----------------------------------------------------------- */
+
+.section-3 {
+  background-image: url(../../public/images/bg-images/canvas-bg.jpeg);
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  padding-bottom: 60px;
+  overflow: hidden;
+}
+
+.blog-container {
+  display: flex;
+  padding: 0 80px !important;
+}
+
+.blog-col {
+  margin: auto;
+}
+
+.blog-img img {
+  width: 100%;
+}
+
+.blog-content {
+  padding: 30px 0;
+}
+
+.blog-content h3 {
+  color: #262626;
+  font-family: Marcellus;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.5em;
+  letter-spacing: 1px;
+}
+
+.blog-content p {
+  color: #656565;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 26px;
+}
+
+.blog-content a {
+  text-decoration: none;
+  color: #262626;
+  font-size: 12px;
+  line-height: 1.15em;
+  letter-spacing: 0.15em;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+
+.blog-content a::before {
+  content: "\2014\2003";
+}
+
+.blog-content a:hover {
+  letter-spacing: 0.25em;
+  color: #262626;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .blog-container {
+    display: block;
+    padding: 30px !important;
+  }
+}
+
+/* -------------------------------------------------------------
+                                                Section 4: Counter Section----------------------------------------------------------- */
+
+.section-4 {
+  padding: 80px;
+  overflow: hidden;
+}
+
+.counter-col {
+  text-align: center;
+  margin: auto;
+}
+
+.counter span {
+  font-size: 55px;
+  font-family: Marcellus;
+  color: #be9c79;
+  letter-spacing: 0.05em;
+  line-height: 0.9em;
+}
+
+.counter h3 {
+  color: #262626;
+  font-family: Marcellus;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.5em;
+  letter-spacing: 1px;
+  margin-top: 20px;
+}
+
+.counter p {
+  color: #656565;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 26px;
+}
+
+/* Responsive */
+@media only screen and (max-width: 768px) {
+  .section-4 {
+    padding: 50px 30px;
+  }
+
+.counter-col{
+    padding: 20px 10px;
+  }
+}
+
+
+/* -------------------------------------------------------------
+                                                    Section 5: Shop Section----------------------------------------------------------- */
+
+.section-5 {
+  background-image: url("../../public/images/bg-images/canvas-bg-2.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 0 40px 80px 40px;
+  overflow: hidden;
+}
+
+.home-shop-col {
+  text-align: center;
+  margin: auto;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.product-img img {
+  width: 90%;
+  transition: all 0.3s;
+  margin: auto;
+}
+
+.product-description h3 {
+  color: #262626;
+  font-family: Marcellus;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.5em;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.product-description p {
+  color: #656565;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.home-shop-row .product {
+  position: relative;
+}
+
+.product .product-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  transition: all 1s;
+}
+
+.product-overlay button {
+  border: none;
+  background-color: #be9c79;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.15em;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: white;
+  padding: 19px 35px;
+  border-radius: 0;
+  transition: all 0.3s;
+}
+
+.product:hover .product-overlay {
+  display: block;
+}
+
+.product-overlay button:hover {
+  background-color: black;
+}
+
+.product:hover .product-content img {
+  background-color: transparent;
+  opacity: 0.3;
+}
+
+/*Responsive */
+@media only screen and (max-width: 768px) {
+  .home-shop-col{
+    width: 100% !important;
+    padding: 20px !important;
+  }
+}
+
+/* -------------------------------------------------------------
+                                                    Section 6: Card Section----------------------------------------------------------- */
+
+.section-6 {
+  padding: 0 80px 80px 80px;
+  overflow: hidden;
+}
+
+.our-delicious-col {
+  text-align: center;
+  margin: auto;
+}
+
+.card {
+  border: none !important;
+}
+
+.card:hover img{
+  transform: scale(1.2);
+  transition: all .3s;
+}
+
+.card-img{
+  padding: 20px 0;
+}
+
+.card-content h3 {
+  color: #262626;
+  font-family: Marcellus;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.5em;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.card-content p {
+  color: #656565;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 26px;
+}
+
+/* Responsive */
+@media only screen and (max-width: 768px) {
+  .section-6 {
+    padding: 50px 30px;
+  }
+
+  .our-delicious-col {
+    padding: 10px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .card-container {
+    display: block;
+  }
+}
+
+/* -------------------------------------------------------------
+                                                Section 7: Contact Section----------------------------------------------------------- */
+
+.section-7 {
+  background-image: url("../../public/images/bg-images/canvas-bg.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 80px !important;
+  display: flex;
+  overflow: hidden;
+}
+
+.home-contact-row{
+  width: 100%;
+  margin: 0 !important;
+}
+
+.section-7 h3 {
+  color: #262626;
+  font-family: Marcellus;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.5em;
+  letter-spacing: 1px;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.section-7 button {
+  margin-left: auto;
+  border: none;
+  color: white;
+  font-size: 12px;
+  line-height: 1.15em;
+  letter-spacing: 0.15em;
+  font-weight: 600;
+  text-transform: uppercase;
+  background-color: #be9c79;
+  padding: 19px 35px;
+  border-radius: 0;
+  transition: all 0.3s;
+}
+
+.section-7 button:hover {
+  background-color: black;
+}
+
+@media only screen and (max-width:991px){
+  .section-7 h3{
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .section-7 button{
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width:576px){
+  .section-7{
+    padding: 50px 20px !important;
+  }
+}

@@ -1,0 +1,258 @@
+* {
+  overflow-x: hidden;
+}
+
+/* -------------------------------------------------------------
+                                                             Hide Scrollbar ---------------------------------------------------------- */
+
+/* Hide Scrollbar */
+::-webkit-scrollbar {
+  display: none; /*Chrome, Safari, Opera*/
+}
+
+body {
+  -ms-overflow-style: none; /*IE, Edge*/
+  scrollbar-width: none; /*Firefox*/
+}
+
+
+/* ------------------------------------------------------------------
+                                                                   Banner ------------------------------------------------------------ */
+
+/* Banner Section */
+.banner {
+  box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.banner-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 87vh;
+  animation-name: Animation;
+  animation-duration: 1s;
+}
+
+.banner-heading h1 {
+  color: white;
+  font-size: 100px;
+  font-weight: 400;
+  letter-spacing: 3px;
+  line-height: 1em;
+  font-family: Marcellus;
+  text-transform: uppercase;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Animation */
+@keyframes Animation {
+  from {
+    transform: translateY(80px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+/* banner responsive */
+@media only screen and (max-width: 900px) {
+  .banner-heading h1 {
+    font-size: 80px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .banner-heading h1 {
+    font-size: 60px !important;
+  }
+}
+
+
+/* ------------------------------------------------------------------
+                                                                  Heading ------------------------------------------------------------ */
+
+/* Heading Component */
+.heading-component {
+  min-width: 100vw;
+  padding: 120px 0 50px 0;
+  text-align: center;
+}
+
+.heading-component h1 {
+  color: #262626;
+  font-family: Marcellus;
+  font-weight: 400;
+  font-size: 45px;
+  letter-spacing: 2px;
+  line-height: 1.22em;
+  text-align: center;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+
+.heading-component p {
+  width: 50%;
+  margin: auto;
+  font-weight: 300;
+  font-size: 18px;
+  letter-spacing: 1px;
+  line-height: 1.55em;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Heading Component Responsive */
+@media only screen and (max-width: 768px) {
+  .heading-component {
+    padding: 80px 0 0 0;
+  }
+
+  .heading-component h1 {
+    font-size: 30px;
+  }
+
+  .heading-component p {
+    padding: 20px 0;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .heading-component p {
+    width: 90%;
+  }
+}
+
+
+/* ------------------------------------------------------------------
+                                                                  Footer ------------------------------------------------------------- */
+
+/* Footer Component */
+.footer-container {
+  min-width: 100vw;
+  background-image: url("../../public/images/bg-images/footer-bg.jpeg");
+  padding: 100px;
+  color: white;
+  text-align: center;
+}
+
+.footer-container p {
+  width: 50%;
+  margin: auto;
+  padding: 50px 0;
+  font-size: 15px;
+  line-height: 26px;
+  font-weight: 300;
+}
+.footer-container h4 {
+  margin-top: 30px;
+  font-family: Marcellus;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.5em;
+  letter-spacing: 1px;
+}
+
+.footer-container span {
+  text-align: center;
+  font-size: 15px;
+  line-height: 26px;
+  font-weight: 300;
+}
+
+.footer-container h3 {
+  margin-top: 30px;
+  font-family: Marcellus;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.5em;
+  letter-spacing: 1px;
+}
+
+.footer-container .newsletter-form {
+  display: flex;
+  padding: 0;
+  margin-top: 10px;
+  width: 50%;
+  margin: auto;
+}
+
+.newsletter-form input {
+  flex: 7;
+  width: 100%;
+  border: 1px solid white;
+  border-right: none;
+  border-radius: 0;
+  padding: 15px;
+  background-color: transparent;
+  color: white;
+}
+
+.newsletter-form input:focus {
+  outline: none;
+}
+
+.newsletter-form-btn{
+  flex: 1;
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+  background-color: white;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+
+.newsletter-form button:hover {
+  background-color: #be9c79;
+  border-color: #be9c79;
+}
+
+.newsletter-form button .fa-envelope {
+  color: black;
+  font-size: 20px;
+}
+
+.newsletter-error-message {
+  margin: 0;
+  padding: 0 !important;
+  color: red;
+  text-align: left;
+}
+
+/* Footer Responsive */
+@media only screen and (max-width: 768px) {
+  .footer-container {
+    padding: 80px 20px;
+  }
+
+  .footer-container p{
+    width: 100%;
+  }
+
+  .footer-container .newsletter-form {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .footer-container input {
+    flex: 4;
+  }
+}
+
+
+/* ---------------------------------------------------------------
+                                                            Form Error Text ---------------------------------------------------------- */
+
+.form-error{
+  color: red;
+}

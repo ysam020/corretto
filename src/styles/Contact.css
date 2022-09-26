@@ -1,0 +1,112 @@
+/* -------------------------------------------------------------
+                                                Section 1: Banner Section----------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------
+                                                Section 2: Contact Form Section------------------------------------------------------- */
+
+/* Text */
+.contact-form-container {
+  padding: 100px 0;
+}
+
+.contact-form-container h2 {
+  text-transform: uppercase;
+  font-family: Marcellus;
+  color: #262626;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 1.28em;
+  letter-spacing: 1.75px;
+}
+
+.contact-form-container p {
+  color: #656565;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 26px;
+  padding: 15px 0;
+  width: 90%;
+}
+
+.contact-form-container ul{
+  padding: 0;
+}
+
+.contact-form-container li {
+  list-style: none;
+  color: #656565;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 26px;
+  margin-bottom: 15px;
+}
+
+.list-icon {
+  font-size: 8px;
+  color: #be9c79;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+.social-icon {
+  margin-right: 30px;
+  margin-top: 20px;
+  color: #be9c79;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+
+/* Form */
+.contact-form-field{
+  padding: 15px;
+  margin-bottom: 25px;
+  border: 1px solid gray;
+  outline: none;
+  width: 100%;
+}
+
+.form-error-message{
+  font-size: 12px !important;
+  padding: 3px !important;
+  color: red !important;
+  margin-top: -25px !important;
+  /* margin-bottom: 25px !important; */
+}
+
+.form-submit-btn{
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  line-height: 60px;
+  font-weight: 600;
+  text-transform: uppercase;
+  background-color: #be9c79;
+  border: none;
+  color: white;
+  padding: 0 35px;
+  transition: all 0.3s;
+}
+
+.form-submit-btn:hover {
+  background-color: #262626;
+}
+
+
+
+/* Responsive */
+@media only screen and (max-width:768px){
+  .contact-form-container{
+      padding: 50px 0;
+  }
+}
+
+@media only screen and (max-width:578px){
+  .contact-form-row{
+      padding: 0 20px;
+  }
+}
+
+
+/* -------------------------------------------------------------
+                                                Section 3: Footer Section ------------------------------------------------------------ */

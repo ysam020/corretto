@@ -1,0 +1,164 @@
+/* ----------------------------------------------------------------------
+                                                                      Appbar --------------------------------------------------------- */
+
+
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-elevation4.MuiAppBar-root.MuiAppBar-colorPrimary.MuiAppBar-positionStatic.css-hip9hq-MuiPaper-root-MuiAppBar-root {
+  background-color: transparent !important;
+  padding: 1%;
+  display: flex;
+  justify-content: center;
+  box-shadow: none;
+}
+
+/* Appbar links */
+.appbar-link {
+  margin-right: 35px;
+  padding: 8px 0;
+  position: relative;
+}
+
+.appbar-link::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  transition: all 0.5s ease;
+  bottom: 0;
+  left: 0;
+}
+
+.appbar-link:hover::after {
+  width: 100%;
+  height: 2px;
+}
+
+.appbar-link.active::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  transition: all 0.3s ease;
+  bottom: 0px;
+  left: 0%;
+}
+
+/* Appbar navigation button hover */
+.appbar-link:hover {
+  text-decoration: none !important;
+}
+
+/* Appbar Navigation Button */
+.appbar
+  .MuiButtonBase-root.MuiButton-root.MuiButton-text.MuiButton-textPrimary.MuiButton-sizeMedium.MuiButton-textSizeMedium.css-1kkpk3h-MuiButtonBase-root-MuiButton-root {
+  font-size: 15px;
+  font-family: Marcellus;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 2px;
+  line-height: 23px;
+  font-weight: 400;
+  text-decoration: none;
+  transition: all 0.3s;
+  position: relative;
+  padding: 10px 0;
+  min-width: auto;
+}
+
+/* Appbar Cart Badge */
+.MuiBadge-badge.MuiBadge-standard.MuiBadge-anchorOriginTopRight.MuiBadge-anchorOriginTopRightRectangular.MuiBadge-overlapRectangular.BaseBadge-badge.css-fvc8ir-MuiBadge-badge {
+  position: relative !important;
+  transform: translate(0px, 0px) !important;
+  background-color: #be9c79 !important;
+  color: white !important;
+  font-size: 15px !important;
+}
+
+/* Appbar toggle */
+.MuiButtonBase-root.MuiIconButton-root.MuiIconButton-colorInherit.MuiIconButton-edgeStart.MuiIconButton-sizeMedium.css-1ptwdp3-MuiButtonBase-root-MuiIconButton-root {
+  position: fixed;
+  top: 1%;
+  right: -2%;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 4px;
+  padding: 10px;
+  z-index: 100;
+}
+
+
+/* ----------------------------------------------------------------------
+                                                                      Drawer --------------------------------------------------------- */
+
+
+/* drawer list items */
+.drawer-logo-link {
+  width: auto;
+  margin: auto;
+}
+
+/* drawer list item default padding */
+.MuiListItem-root.MuiListItem-gutters.MuiListItem-padding.css-1p823my-MuiListItem-root{
+  padding: 0 !important;
+}
+
+.drawer-link{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+  margin: 0 auto;
+  padding: 0 20px;
+  border-radius: 10px;
+}
+
+.drawer-link.active{
+  background-color: rgb(190, 156, 121, .5) !important;
+}
+
+/* Drawer list items */
+.drawer-link span {
+  color: #262626 !important;
+  text-decoration: none !important;
+  font-family: Marcellus;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.55em;
+  letter-spacing: 1px;
+}
+
+.drawer-link:hover {
+  text-decoration: none !important;
+}
+
+/* Drawer Cart text */
+.MuiTypography-root.MuiTypography-body1.MuiListItemText-primary.makeStyles-drawerText-9.css-10hburv-MuiTypography-root:last-child {
+  padding: 10px !important;
+}
+
+/* Drawer Cart Badge */
+.MuiBadge-badge.MuiBadge-standard.MuiBadge-anchorOriginTopRight.MuiBadge-anchorOriginTopRightRectangular.MuiBadge-overlapRectangular.MuiBadge-colorSecondary.BaseBadge-badge.css-jcn4dz-MuiBadge-badge {
+  transform: translate(0, 0) !important;
+  position: relative !important;
+  background-color: #262626 !important;
+  color: white !important
+}
+
+/* Drawer bg image */
+.MuiPaper-root.MuiPaper-elevation.MuiPaper-elevation16.MuiDrawer-paper.MuiDrawer-paperAnchorLeft.css-4t3x6l-MuiPaper-root-MuiDrawer-paper {
+  background-image: url("../../public/images/bg-images/canvas-bg.jpeg");
+  background-position: right;
+  background-size: cover;
+}
+
+
+/* ---------------------------------------------------------------------
+                                                                    Responsive ------------------------------------------------------- */
+
+
+@media only screen and (max-width: 899px) {
+  /* Hide brand logo */
+  .MuiTypography-root.MuiTypography-h6.css-fs2cdh-MuiTypography-root img{
+    display: none;
+  }
+}

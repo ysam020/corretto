@@ -1,0 +1,385 @@
+/* -------------------------------------------------------------
+                                                    Section 1: Banner Section--------------------------------------------------------- */
+
+/* -------------------------------------------------------------
+                                                    Section 2: Robusta Section-------------------------------------------------------- */
+.container.about-section-2 {
+  min-width: 100vw !important;
+  padding: 80px;
+}
+
+.about-section-2-row {
+  text-align: center;
+  padding: 80px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.about-section-2-row img {
+  width: auto;
+  margin: auto;
+}
+
+.about-section-2-row h1 {
+  color: #262626;
+  font-family: Marcellus;
+  font-size: 45px;
+  letter-spacing: 2px;
+  font-weight: 400;
+  line-height: 1.22em;
+  text-transform: uppercase;
+  padding: 30px 0;
+  overflow: hidden;
+}
+
+.about-section-2-row p {
+  color: #656565;
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-weight: 300;
+  line-height: 1.55em;
+  padding: 0 150px;
+}
+
+.gallery-container ul {
+  margin-bottom: 30px;
+}
+
+.gallery-container ul li {
+  display: table-cell;
+  padding: 0 10px !important;
+  flex: 1;
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #262626;
+  cursor: pointer;
+  border-right: 1px solid #656565;
+}
+
+.gallery-filter-mobile {
+  display: none;
+}
+
+.gallery-container ul li:last-child {
+  border-right: none;
+}
+
+.gallery-filter-btn:hover {
+  color: #be9c79;
+}
+
+.gallery-col {
+  height: auto;
+  width: auto;
+  /* padding: 0 !important; */
+  overflow: hidden;
+  position: relative;
+}
+
+.gallery-col img {
+  width: 100%;
+}
+
+.gallery-col h2 {
+  text-transform: uppercase;
+  color: #262626;
+  font-size: 28px;
+  font-family: Marcellus;
+  line-height: 1.33em;
+  letter-spacing: 1.5px;
+  font-weight: 400;
+  padding: 15px 0 50px 0;
+}
+
+/* Responsive */
+@media only screen and (max-width: 768px) {
+  .gallery-col {
+    width: 100% !important;
+  }
+
+  .container.about-section-2 {
+    padding: 50px 30px;
+  }
+
+  .about-section-2-row {
+    padding: 0;
+  }
+
+  .gallery-filter {
+    display: none;
+  }
+
+  .gallery-filter-mobile {
+    display: block;
+    margin: 30px auto;
+    width: 90%;
+    padding: 15px;
+    border: 1px solid #656556;
+    outline: none;
+    background-color: transparent;
+  }
+
+  .gallery-container {
+    padding: 0 !important;
+  }
+
+  .gallery-col {
+    padding: 0 10px !important;
+  }
+
+  .gallery-col h2 {
+    font-size: 16px;
+    padding: 15px 10px 25px 10px;
+  }
+}
+
+/* -------------------------------------------------------------
+                                                    Section 3: Owner Section--------------------------------------------------------- */
+
+/* Section 3 */
+.container.about-section-3 {
+  display: flex;
+  padding: 80px;
+  min-width: 100vw !important;
+  background-image: url("../../public/images/bg-images/canvas-bg.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.about-section-3 .row.left-col {
+  flex: 1;
+}
+
+.about-section-3 .row.right-col {
+  flex: 1.5;
+  text-align: center;
+  padding: 40px 150px;
+}
+
+.about-section-3 .row.left-col img {
+  width: 100% !important;
+}
+
+.about-section-3 .row.right-col h2 {
+  color: #262626;
+  font-family: Marcellus;
+  font-size: 45px;
+  letter-spacing: 2px;
+  font-weight: 400;
+  line-height: 1.22em;
+  text-transform: uppercase;
+  overflow: hidden;
+  width: 100%;
+}
+
+.about-section-3 .row.right-col p {
+  color: #656565;
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-weight: 300;
+  line-height: 1.55em;
+  padding: 20px 0;
+}
+
+.about-section-3 .row.right-col span {
+  color: #656565;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 26px;
+  padding: 20px 0;
+}
+
+.about-section-3 .row.right-col .title-separator {
+  width: auto;
+  margin: 0 auto;
+}
+
+.about-section-3 .row.right-col .signature-img {
+  margin: 0 auto;
+  padding-top: 20px;
+  width: auto;
+}
+
+/* Responsive */
+@media only screen and (max-width: 1200px) {
+  .container.about-section-3 {
+    display: block;
+  }
+
+  .owner-image {
+    width: 50% !important;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container.about-section-3 .row.right-col {
+    padding: 50px 0;
+  }
+
+  .about-section-2-row p {
+    padding: 20px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .banner-container .banner-heading h1 {
+    font-size: 60px;
+  }
+
+  .container.about-section-3 {
+    padding: 80px 30px;
+  }
+}
+
+/* -------------------------------------------------------------
+                                                        Section 4: Our Trusted Brand ------------------------------------------------- */
+
+.container.about-section-4 {
+  padding: 80px;
+  min-width: 100% !important;
+}
+
+.section-4-left-col {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+}
+
+.container.about-section-4 h2 {
+  text-transform: uppercase;
+  color: #262626;
+  font-family: Marcellus;
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 1.28em;
+  letter-spacing: 1.75px;
+}
+
+.container.about-section-4 p {
+  color: #656565;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.55em;
+  letter-spacing: 1px;
+  margin: 30px 0;
+}
+
+.container.about-section-4 button {
+  /* width: 50%; */
+  text-transform: uppercase;
+  color: #262626;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.15em;
+  letter-spacing: 0.15px;
+  padding: 19px 35px;
+  border-radius: 0;
+  background-color: white;
+  border: 1px solid #262626;
+  transition: all 0.3s;
+}
+
+.container.about-section-4 button:hover {
+  background-color: #262626;
+  color: white;
+}
+
+.section-4-right-col {
+  margin-left: auto;
+}
+
+.img-container-col {
+  position: relative;
+}
+
+.brand-icon {
+  padding: 30px;
+  margin: auto;
+}
+
+.brand-img-container {
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+}
+
+.brand-img-container-1::before,
+.brand-img-container-2::before,
+.brand-img-container-3::before,
+.brand-img-container-4::before,
+.brand-img-container-5::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 80%;
+  background-color: #f3f3f3;
+  top: 10%;
+  right: 0;
+}
+
+.brand-img-container-3::before {
+  display: none;
+}
+
+.brand-img-container-3::after,
+.brand-img-container-4::after,
+.brand-img-container-5::after,
+.brand-img-container-6::after {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 2px;
+  background-color: #f3f3f3;
+  top: 0;
+  right: 10%;
+}
+
+.brand-img-container-3::after {
+  display: none;
+}
+
+/* Responsive */
+@media only screen and (max-width: 1200px) {
+  .section-4-left-col {
+    text-align: center;
+    align-items: center;
+  }
+
+  .container.about-section-4 button {
+    margin-bottom: 30px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .container.about-section-4 {
+    padding: 80px 30px;
+  }
+
+  .brand-img-container-3::before,
+  .brand-img-container-5::before {
+    display: block;
+  }
+
+  .brand-img-container-2::before,
+  .brand-img-container-4::before {
+    display: none;
+  }
+
+  .brand-img-container-3::after {
+    display: block;
+  }
+}
+
+/* -------------------------------------------------------------
+                                                Section 4: Footer Section----------------------------------------------------------- */
+
+.btn-group {
+  margin: 50px 0;
+  padding: 0;
+  width: auto;
+}

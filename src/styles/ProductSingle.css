@@ -1,0 +1,108 @@
+/* -------------------------------------------------------------
+                                                Section 1: Banner Section----------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------
+                                                Section 2: Product Section----------------------------------------------------------- */
+
+.product-single-container{
+    padding: 80px 0;
+    overflow: hidden;
+}
+
+
+/* Image */
+.product-single-text-col, .product-single-img-col{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Description */
+.product-single-text-col h2 {
+  text-transform: uppercase;
+  font-family: Marcellus;
+  color: #262626;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 1.28em;
+  letter-spacing: 1.75px;
+}
+
+.product-single-text-col h5 {
+  color: #777;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 1.28em;
+  letter-spacing: 1.75px;
+}
+
+.product-single-text-col p {
+  color: #656565;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 26px;
+}
+
+.product-single-text-col button {
+  text-transform: uppercase;
+  color: white;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.15em;
+  letter-spacing: 0.15em;
+  padding: 19px 35px;
+  border-radius: 0;
+  background-color: #be9c79;
+  border: none;
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.product-single-text-col button:hover{
+    background-color: black;
+}
+
+.product-info-heading{
+    color: #262626;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.05em;
+    line-height: 2em;
+}
+
+.product-info-heading::after{
+    content: '\2002';
+}
+
+.product-info{
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+.product-single-text-col h3{
+    text-transform: uppercase;
+  font-family: Marcellus;
+  color: #262626;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.28em;
+  letter-spacing: 1.75px;
+}
+
+
+/* Responsive */
+.product-single-container{
+  padding: 50px 0;
+  overflow: hidden;
+}
+
+@media only screen and (max-width:992px){
+.product-single-text-col{
+  padding: 20px 30px !important;
+}
+}
+
+
+/* -------------------------------------------------------------
+                                                Section 3: Footer Section----------------------------------------------------------- */
