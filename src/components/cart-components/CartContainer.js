@@ -15,7 +15,7 @@ function CartContainer() {
     state: { cart },
     dispatch,
   } = CartState();
-  
+
   const [total, setTotal] = useState();
 
   useEffect(() => {
@@ -41,7 +41,7 @@ function CartContainer() {
                 <Form.Control
                   as="select"
                   className="cart-quantity-input"
-                  value='Select Quantity'
+                  value={products.qty}
                   onChange={(e) =>
                     dispatch({
                       type: "CHANGE_CART_QTY",

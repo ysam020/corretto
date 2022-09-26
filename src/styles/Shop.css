@@ -407,5 +407,11 @@
   }
 }
 
+@media only screen and (max-width: 400px) {
+  .product-description h3 {
+    font-size: 13px;
+  }
+}
+
 /* -------------------------------------------------------------
                                                 Section 3: Footer Section----------------------------------------------------------- */

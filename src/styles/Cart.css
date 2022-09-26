@@ -146,8 +146,9 @@
   text-transform: uppercase;
   font-family: Marcellus;
   color: #262626;
-  font-size: 45px;;
+  font-size: 45px;
   margin: 50px 0;
+  text-align: center;
 }
 
 .empty-cart-container button {
@@ -158,13 +159,13 @@
   font-weight: 600;
   font-size: 12px;
   line-height: 1.15em;
-  letter-spacing: .15em;
+  letter-spacing: 0.15em;
   padding: 19px 35px;
   border-radius: 0;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
-.empty-cart-container button:hover{
+.empty-cart-container button:hover {
   background-color: #262626;
 }
 
@@ -195,8 +196,8 @@
   }
 }
 
-@media only screen and (max-width:786px) {
-  .empty-cart-container h1{
+@media only screen and (max-width: 786px) {
+  .empty-cart-container h1 {
     font-size: 25px;
   }
 }

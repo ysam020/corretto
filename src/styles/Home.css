@@ -95,7 +95,7 @@
 
 @media only screen and (max-width: 900px) {
   .hero-content h1 {
-    font-size: 60px;
+    font-size: 50px;
   }
 }
 
@@ -113,7 +113,7 @@
   }
 
   .hero-content p {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 30px;
     font-weight: 300;
     color: white;
@@ -178,12 +178,12 @@
 }
 
 /* Left Icon Component */
-.icon-content{
+.icon-content {
   display: flex;
   padding: 20px 0;
 }
 
-.left-icon-text h3{
+.left-icon-text h3 {
   color: #262626;
   font-family: Marcellus;
   font-weight: 400;
@@ -194,7 +194,7 @@
   padding-left: 20px;
 }
 
-.left-icon-text p{
+.left-icon-text p {
   font-weight: 300;
   font-size: 15px;
   line-height: 26px;
@@ -203,7 +203,7 @@
   padding-left: 20px;
 }
 
-.icon-content .icon{
+.icon-content .icon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -211,12 +211,12 @@
 }
 
 /* Right Icon Component */
-.icon-content{
+.icon-content {
   display: flex;
   padding: 20px 0;
 }
 
-.right-icon-text h3{
+.right-icon-text h3 {
   color: #262626;
   font-family: Marcellus;
   font-weight: 400;
@@ -227,7 +227,7 @@
   padding-right: 20px;
 }
 
-.right-icon-text p{
+.right-icon-text p {
   font-weight: 300;
   font-size: 15px;
   line-height: 26px;
@@ -236,7 +236,7 @@
   padding-right: 20px;
 }
 
-.icon-content .icon{
+.icon-content .icon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -384,11 +384,28 @@
     padding: 50px 30px;
   }
 
-.counter-col{
+  .counter-col {
     padding: 20px 10px;
+  }
+
+  .counter span {
+    font-size: 40px;
   }
 }
 
+@media only screen and (max-width: 480px) {
+  .counter span {
+    font-size: 30px;
+  }
+
+  .counter h3 {
+    font-size: 16px;
+  }
+
+  .counter p {
+    font-size: 14px;
+  }
+}
 
 /* -------------------------------------------------------------
                                                     Section 5: Shop Section----------------------------------------------------------- */
@@ -474,7 +491,7 @@
 
 /*Responsive */
 @media only screen and (max-width: 768px) {
-  .home-shop-col{
+  .home-shop-col {
     width: 100% !important;
     padding: 20px !important;
   }
@@ -497,12 +514,12 @@
   border: none !important;
 }
 
-.card:hover img{
+.card:hover img {
   transform: scale(1.2);
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
-.card-img{
+.card-img {
   padding: 20px 0;
 }
 
@@ -539,6 +556,14 @@
   .card-container {
     display: block;
   }
+
+  .card-content h3 {
+    font-size: 20px;
+  }
+
+  .card-content p {
+    font-size: 15px;
+  }
 }
 
 /* -------------------------------------------------------------
@@ -553,7 +578,7 @@
   overflow: hidden;
 }
 
-.home-contact-row{
+.home-contact-row {
   width: 100%;
   margin: 0 !important;
 }
@@ -588,19 +613,19 @@
   background-color: black;
 }
 
-@media only screen and (max-width:991px){
-  .section-7 h3{
+@media only screen and (max-width: 991px) {
+  .section-7 h3 {
     text-align: center;
     margin-bottom: 20px;
   }
 
-  .section-7 button{
+  .section-7 button {
     width: 100%;
   }
 }
 
-@media only screen and (max-width:576px){
-  .section-7{
+@media only screen and (max-width: 576px) {
+  .section-7 {
     padding: 50px 20px !important;
   }
 }
