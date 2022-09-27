@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./styles/App.css";
 import Home from "./Home";
 import About from "./pages/About";
@@ -43,10 +43,12 @@ function App() {
           path="shop/product/:url"
           element={<ProductSingle />}
         ></Route>
-        {cart.length > 0 ?
-          <Route exact path="/checkout" element={<Checkout />}></Route> : <Route exact path="/" element={<Home />}></Route>
-        }
-        <Route path='*' exact={true} element={<Error />} />
+        {cart.length > 0 ? (
+          <Route exact path="/checkout" element={<Checkout />}></Route>
+        ) : (
+          <Route exact path="/" element={<Home />}></Route>
+        )}
+        <Route path="*" exact={true} element={<Error />} />
       </Routes>
     </>
   );

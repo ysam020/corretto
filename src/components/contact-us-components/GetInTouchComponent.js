@@ -8,7 +8,7 @@ import { faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { faLinkedinIn } from "@fortawesome/free-brands-svg-icons";
 import { faInstagram } from "@fortawesome/free-brands-svg-icons";
 import { faCircle } from "@fortawesome/free-solid-svg-icons";
-import FormInput from "./FormInput";
+import ContactForm from "../forms/ContactForm";
 
 function GetInTouchComponent() {
   return (
@@ -84,7 +84,7 @@ function GetInTouchComponent() {
           </Col>
 
           <Col md={6}>
-            <FormInput />
+            <ContactForm />
           </Col>
         </Row>
       </Container>

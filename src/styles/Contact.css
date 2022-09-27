@@ -1,7 +1,6 @@
 /* -------------------------------------------------------------
                                                 Section 1: Banner Section----------------------------------------------------------- */
 
-
 /* -------------------------------------------------------------
                                                 Section 2: Contact Form Section------------------------------------------------------- */
 
@@ -29,7 +28,7 @@
   width: 90%;
 }
 
-.contact-form-container ul{
+.contact-form-container ul {
   padding: 0;
 }
 
@@ -57,9 +56,18 @@
   cursor: pointer;
 }
 
-
 /* Form */
-.contact-form-field{
+.contact-form-inner-container {
+  margin: 0 80px;
+}
+
+.form-control {
+  height: auto !important;
+  border: none !important;
+  padding: 0 !important;
+}
+
+.contact-form-field {
   padding: 15px;
   margin-bottom: 25px;
   border: 1px solid gray;
@@ -67,15 +75,7 @@
   width: 100%;
 }
 
-.form-error-message{
-  font-size: 12px !important;
-  padding: 3px !important;
-  color: red !important;
-  margin-top: -25px !important;
-  /* margin-bottom: 25px !important; */
-}
-
-.form-submit-btn{
+.form-submit-btn {
   font-size: 12px;
   letter-spacing: 0.15em;
   line-height: 60px;
@@ -92,21 +92,18 @@
   background-color: #262626;
 }
 
-
-
 /* Responsive */
-@media only screen and (max-width:768px){
-  .contact-form-container{
-      padding: 50px 0;
+@media only screen and (max-width: 768px) {
+  .contact-form-container {
+    padding: 50px 0;
   }
 }
 
-@media only screen and (max-width:578px){
-  .contact-form-row{
-      padding: 0 20px;
+@media only screen and (max-width: 578px) {
+  .contact-form-row {
+    padding: 0 20px;
   }
 }
-
 
 /* -------------------------------------------------------------
                                                 Section 3: Footer Section ------------------------------------------------------------ */

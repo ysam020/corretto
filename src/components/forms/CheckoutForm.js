@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
-import { checkoutFormValidationSchema } from "../../schemas/CheckoutForm";
+import { formValidationSchema } from "../../schemas/CheckoutForm";
 import FormikControl from "../form-components/FormikControl";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
@@ -65,7 +65,7 @@ function CheckoutForm() {
   return (
     <Formik
       initialValues={initialValues}
-      validationSchema={checkoutFormValidationSchema}
+      validationSchema={formValidationSchema}
       onSubmit={onSubmit}
     >
       {(formik) => (
@@ -325,7 +325,7 @@ function CheckoutForm() {
             <Row className="input-field-row">
               <Col className="input-field-col">
                 <button
-                  //   disabled={!Formik.isValid && Formik.isSubmitting}
+                  disabled={!Formik.isValid && Formik.isSubmitting}
                   className="checkout-form-submit-btn"
                   type="submit"
                 >

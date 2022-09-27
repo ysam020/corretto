@@ -67,13 +67,6 @@
   outline: none;
 }
 
-.checkout-form-field {
-  padding: 15px;
-  border: 1px solid gray;
-  outline: none;
-  width: 100%;
-}
-
 .checkout-form-submit-btn {
   font-size: 12px;
   letter-spacing: 0.15em;
