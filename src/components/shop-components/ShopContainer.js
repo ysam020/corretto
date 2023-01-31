@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import ProductList from "../../data/ProductList";
-import ShopSidebar from './ShopSidebar';
+import ShopSidebar from "./ShopSidebar";
 import MobileFilters from "./MobileFilters";
 import { CartState } from "../../context/Context";
 import Container from "react-bootstrap/Container";
@@ -64,6 +64,7 @@ function ShopContainer() {
       if (categoryData.category.includes(categoryItem)) {
         return categoryData;
       }
+      return false;
     });
     setData(categoryResult);
   };
@@ -91,11 +92,12 @@ function ShopContainer() {
   const displayProducts = data
     .slice(pagesVisited, pagesVisited + productsPerPage)
     .filter((val) => {
-      if (searchTerm == "") {
+      if (searchTerm === "") {
         return products;
       } else if (val.title.toLowerCase().includes(searchTerm.toLowerCase())) {
         return val;
       }
+      return false;
     })
     .map((products, i) => {
       return (
@@ -103,7 +105,10 @@ function ShopContainer() {
           <div className="product">
             <div className="product-content">
               <div className="product-img">
-                <Link to={`product/${products.id}`} className='single-product-link'>
+                <Link
+                  to={`product/${products.id}`}
+                  className="single-product-link"
+                >
                   <img src={products.image} alt="" />
                 </Link>
               </div>
@@ -169,7 +174,13 @@ function ShopContainer() {
     <Container fluid className="shop-products-container">
       <Row className="shop-products-row">
         <Col lg={3} className="shop-sidebar-col">
-          <ShopSidebar setSearchTerm = {setSearchTerm} ascSorting = {ascSorting} dscSorting = {dscSorting} filterResultByCategory = {filterResultByCategory} filterResultByTag = {filterResultByTag} />
+          <ShopSidebar
+            setSearchTerm={setSearchTerm}
+            ascSorting={ascSorting}
+            dscSorting={dscSorting}
+            filterResultByCategory={filterResultByCategory}
+            filterResultByTag={filterResultByTag}
+          />
         </Col>
 
         <Col lg={9} className="shop-products-col">
@@ -209,7 +220,15 @@ function ShopContainer() {
         </Col>
 
         <Col className="product-filter-mobile">
-          <MobileFilters show = {show} handleShow = {handleShow} handleClose = {handleClose} ascSorting = {ascSorting} dscSorting = {dscSorting} filterResultByCategory = {filterResultByCategory} filterResultByTag = {filterResultByTag} />
+          <MobileFilters
+            show={show}
+            handleShow={handleShow}
+            handleClose={handleClose}
+            ascSorting={ascSorting}
+            dscSorting={dscSorting}
+            filterResultByCategory={filterResultByCategory}
+            filterResultByTag={filterResultByTag}
+          />
         </Col>
       </Row>
     </Container>
@@ -217,4 +236,3 @@ function ShopContainer() {
 }
 
 export default ShopContainer;
-

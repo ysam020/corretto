@@ -15,7 +15,6 @@ const Cart = () => {
 
   const {
     state: { cart },
-    dispatch,
   } = CartState();
 
   return (

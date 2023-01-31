@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import Headings from "../../data/Headings";
 import ProductList from "../../data/ProductList";
 import Container from "react-bootstrap/Container";
@@ -8,7 +8,6 @@ import { useNavigate } from "react-router-dom";
 import { CartState } from "../../context/Context";
 
 function HomeCoffeeShopComponent() {
-  const [data, setData] = useState(ProductList);
   // Scroll to top
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -30,13 +29,8 @@ function HomeCoffeeShopComponent() {
 
   // Cart State
   const {
-    state: { products },
-  } = CartState();
-
-  const {
     state: { cart },
     dispatch,
-    productDispatch,
   } = CartState();
 
   return (
@@ -54,8 +48,8 @@ function HomeCoffeeShopComponent() {
       })}
 
       <Row className="home-shop-row">
-        {data.slice(0, 4).map((products, i) => {
-          const { id, title, price, image } = products;
+        {ProductList.slice(0, 4).map((products, i) => {
+          const { title, price, image } = products;
 
           return (
             <Col
@@ -100,24 +94,24 @@ function HomeCoffeeShopComponent() {
                   </div>
                 </div>
                 <div className="product-overlay">
-                {cart.some((p) => p.id === products.id) ? (
-                <button onClick={cartRedirect}>Go to Cart</button>
-              ) : (
-                <button
-                  onClick={() =>
-                    dispatch({
-                      type: "ADD_TO_CART",
-                      payload: products,
-                    })
-                  }
-                  disabled={!products.inStock}
-                  className={`add-to-cart-btn ${
-                    !products.inStock ? "disabled" : "active"
-                  }`}
-                >
-                  {!products.inStock ? "Out of Stock" : "Add to Cart"}
-                </button>
-              )}
+                  {cart.some((p) => p.id === products.id) ? (
+                    <button onClick={cartRedirect}>Go to Cart</button>
+                  ) : (
+                    <button
+                      onClick={() =>
+                        dispatch({
+                          type: "ADD_TO_CART",
+                          payload: products,
+                        })
+                      }
+                      disabled={!products.inStock}
+                      className={`add-to-cart-btn ${
+                        !products.inStock ? "disabled" : "active"
+                      }`}
+                    >
+                      {!products.inStock ? "Out of Stock" : "Add to Cart"}
+                    </button>
+                  )}
                 </div>
               </div>
             </Col>

@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 import Modal from "react-bootstrap/Modal";
 import { Button } from "react-bootstrap";
 
@@ -20,8 +20,8 @@ function MobileFilters(props) {
                 <h3>Sorting</h3>
                 <button
                   onClick={() => {
-                    {props.ascSorting("price")};
-                    {props.handleClose()};
+                    props.ascSorting("price");
+                    props.handleClose();
                   }}
                   className="product-sorting-btn"
                 >
@@ -29,8 +29,8 @@ function MobileFilters(props) {
                 </button>
                 <button
                   onClick={() => {
-                    {props.dscSorting("price")};
-                    {props.handleClose()};
+                    props.dscSorting("price");
+                    props.handleClose();
                   }}
                   className="product-sorting-btn"
                 >
@@ -41,56 +41,56 @@ function MobileFilters(props) {
                 <h3>Product Categories</h3>
                 <button
                   onClick={() => {
-                    {props.filterResultByCategory("all")};
-                    {props.handleClose()};
+                    props.filterResultByCategory("all");
+                    props.handleClose();
                   }}
                 >
                   Show All Products
                 </button>
                 <button
                   onClick={() => {
-                    {props.filterResultByCategory("accessories")};
-                    {props.handleClose()};
+                    props.filterResultByCategory("accessories");
+                    props.handleClose();
                   }}
                 >
                   Accessories
                 </button>
                 <button
                   onClick={() => {
-                    {props.filterResultByCategory("bean varieties")};
-                    {props.handleClose()};
+                    props.filterResultByCategory("bean varieties");
+                    props.handleClose();
                   }}
                 >
                   Bean Varieties
                 </button>
                 <button
                   onClick={() => {
-                    {props.filterResultByCategory("coffee cups")};
-                    {props.handleClose()};
+                    props.filterResultByCategory("coffee cups");
+                    props.handleClose();
                   }}
                 >
                   Coffee Cups
                 </button>
                 <button
                   onClick={() => {
-                    {props.filterResultByCategory("espresso machines")};
-                    {props.handleClose()};
+                    props.filterResultByCategory("espresso machines");
+                    props.handleClose();
                   }}
                 >
                   Espresso Machines
                 </button>
                 <button
                   onClick={() => {
-                    {props.filterResultByCategory("fresh coffee")};
-                    {props.handleClose()};
+                    props.filterResultByCategory("fresh coffee");
+                    props.handleClose();
                   }}
                 >
                   Fresh Coffee
                 </button>
                 <button
                   onClick={() => {
-                    {props.filterResultByCategory("italian coffee")};
-                    {props.handleClose()};
+                    props.filterResultByCategory("italian coffee");
+                    props.handleClose();
                   }}
                 >
                   Italian Coffe
@@ -101,48 +101,48 @@ function MobileFilters(props) {
                 <h3>Product Tags</h3>
                 <button
                   onClick={() => {
-                    {props.filterResultByTag("fresh")};
-                    {props.handleClose()};
+                    props.filterResultByTag("fresh");
+                    props.handleClose();
                   }}
                 >
                   Fresh
                 </button>
                 <button
                   onClick={() => {
-                    {props.filterResultByTag("aroma")};
-                    {props.handleClose()};
+                    props.filterResultByTag("aroma");
+                    props.handleClose();
                   }}
                 >
                   Aroma
                 </button>
                 <button
                   onClick={() => {
-                    {props.filterResultByTag("beans")};
-                    {props.handleClose()};
+                    props.filterResultByTag("beans");
+                    props.handleClose();
                   }}
                 >
                   Beans
                 </button>
                 <button
                   onClick={() => {
-                    {props.filterResultByTag("cream")};
-                    {props.handleClose()};
+                    props.filterResultByTag("cream");
+                    props.handleClose();
                   }}
                 >
                   Cream
                 </button>
                 <button
                   onClick={() => {
-                    {props.filterResultByTag("classic")};
-                    {props.handleClose()};
+                    props.filterResultByTag("classic");
+                    props.handleClose();
                   }}
                 >
                   Classic
                 </button>
                 <button
                   onClick={() => {
-                    {props.filterResultByTag("accessories")};
-                    {props.handleClose()};
+                    props.filterResultByTag("accessories");
+                    props.handleClose();
                   }}
                 >
                   Accessories

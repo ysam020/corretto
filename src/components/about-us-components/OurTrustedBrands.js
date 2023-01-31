@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import OurTrustedBrandIcons from "../../data/OurTrustedBrandIcons";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -12,8 +12,6 @@ function OurTrustedBrands() {
     let path = `/menu`;
     navigate(path);
   };
-
-  const [icons, setIcons] = useState(OurTrustedBrandIcons);
 
   return (
     <Container fluid className="container about-section-4">
@@ -29,18 +27,14 @@ function OurTrustedBrands() {
 
         <Col xl={5} md={12} className="section-4-right-col">
           <Row>
-            {icons.map((values, i) => {
+            {OurTrustedBrandIcons.map((values, i) => {
               const { image, imageHover, id } = values;
 
               return (
-                <Col
-                  key={i}
-                  xl={4}
-                  sm={4}
-                  xs={6}
-                  className="img-container-col"
-                >
-                  <div className={`brand-img-container brand-img-container-${id}`}>
+                <Col key={i} xl={4} sm={4} xs={6} className="img-container-col">
+                  <div
+                    className={`brand-img-container brand-img-container-${id}`}
+                  >
                     <HoverImage
                       src={image}
                       hoverSrc={imageHover}

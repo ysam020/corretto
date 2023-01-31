@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Headings from "../../data/Headings";
 import HomeCards from "../../data/HomeCards";
 import Container from "react-bootstrap/Container";
@@ -6,31 +6,28 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 function OurDeliciousOfferComponent() {
-  const [headings, setHeadings] = useState(Headings);
-  const [data, setData] = useState(HomeCards);
-
   return (
     <>
-    {headings.slice(2,3).map((values, i) => {
-      const {heading, titleSeparator, subHeading} = values;
+      {Headings.slice(2, 3).map((values, i) => {
+        const { heading, titleSeparator, subHeading } = values;
 
-      return(
-        <div key = {i} className=" container heading-component">
+        return (
+          <div key={i} className=" container heading-component">
             <h1>{heading}</h1>
             <img src={titleSeparator} alt="" />
             <p>{subHeading}</p>
           </div>
-      );
-    })}
+        );
+      })}
 
       <Container fluid className="section-6">
         <Row>
-          {data.map((values, i) => {
+          {HomeCards.map((values, i) => {
             const { cardImage, cardTitle, cardText } = values;
 
             return (
               <Col
-                key = {i}
+                key={i}
                 xxl={3}
                 xl={3}
                 lg={6}

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Headings from "../../data/Headings";
 import Blogs from "../../data/Blogs";
 import Container from "react-bootstrap/Container";
@@ -6,16 +6,13 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 function TheCoffeeHeraldComponent() {
-  const [heading, setHeading] = useState(Headings);
-  const [data, setdata] = useState(Blogs);
-
   return (
     <div className="section-3">
-      {heading.slice(0,1).map((values, i) => {
+      {Headings.slice(0, 1).map((values, i) => {
         const { heading, titleSeparator, subHeading } = values;
 
         return (
-          <div key = {i} className=" container heading-component">
+          <div key={i} className=" container heading-component">
             <h1>{heading}</h1>
             <img src={titleSeparator} alt="" />
             <p>{subHeading}</p>
@@ -25,7 +22,7 @@ function TheCoffeeHeraldComponent() {
 
       <Container fluid className="blog-container">
         <Row>
-          {data.map((values, i) => {
+          {Blogs.map((values, i) => {
             const { blogImage, blogTitle, blogText } = values;
 
             return (
@@ -46,7 +43,7 @@ function TheCoffeeHeraldComponent() {
                   <div className="blog-content">
                     <h3>{blogTitle}</h3>
                     <p>{blogText}</p>
-                    <a href="#">
+                    <a href="/#">
                       <span>READ MORE</span>
                     </a>
                   </div>

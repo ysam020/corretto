@@ -1,17 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 import IconDescription from "../../data/IconDescription";
 
 function HomeSection2() {
-  const [data, setData] = useState(IconDescription);
-
   return (
     <div className="section-2">
       <div className="left-col">
-        {data.slice(0,3).map((values, i) => {
+        {IconDescription.slice(0, 3).map((values, i) => {
           const { id, iconImage, title, text } = values;
 
           return (
-            <div key = {i}
+            <div
+              key={i}
               data-aos="fade-right"
               data-aos-anchor-placement="center-bottom"
               className={`row-${id}`}
@@ -30,15 +29,16 @@ function HomeSection2() {
         })}
       </div>
       <div className="center-col">
-        <img src='./images/product-img-1.png' alt="" />
+        <img src="./images/product-img-1.png" alt="" />
       </div>
 
       <div className="right-col">
-        {data.map((values, i) => {
+        {IconDescription.map((values, i) => {
           const { id, title, text, iconImage } = values;
 
           return (
-            <div key = {i}
+            <div
+              key={i}
               data-aos="fade-left"
               data-aos-anchor-placement="center-bottom"
               className={`row-${id}`}

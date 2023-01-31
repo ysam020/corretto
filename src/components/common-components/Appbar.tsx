@@ -1,7 +1,6 @@
 import * as React from "react";
 import "../../styles/Appbar.css";
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
-import { CartState } from "../../context/Context";
 import { NavLink } from "react-router-dom";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
 import {
@@ -107,13 +106,6 @@ function HideOnScroll(props: Props) {
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 export default function DrawerAppBar(props: Props) {
-  // Cart State
-  const {
-    state: { cart },
-    dispatch,
-    productDispatch,
-  } = CartState();
-
   // Custom CSS
   const classes = useStyles();
 
@@ -131,7 +123,11 @@ export default function DrawerAppBar(props: Props) {
       <List>
         <ListItem className={classes.drawerListItem}>
           <NavLink to="/" className="drawer-logo-link ">
-            <img src="/images/logo-dark.png" className={classes.drawerLogo} />
+            <img
+              src="/images/logo-dark.png"
+              className={classes.drawerLogo}
+              alt="drawer-logo"
+            />
           </NavLink>
         </ListItem>
 

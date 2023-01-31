@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
@@ -50,28 +50,28 @@ function GetInTouchComponent() {
               </li>
               <li>
                 <span>
-                  <a href="#">
+                  <a href="/#">
                     <FontAwesomeIcon
                       icon={faFacebookF}
                       beat
                       className="social-icon"
                     />
                   </a>
-                  <a href="#">
+                  <a href="/#">
                     <FontAwesomeIcon
                       icon={faTwitter}
                       beat
                       className="social-icon"
                     />
                   </a>
-                  <a href="#">
+                  <a href="/#">
                     <FontAwesomeIcon
                       icon={faLinkedinIn}
                       className="social-icon"
                       beat
                     />
                   </a>
-                  <a href="#">
+                  <a href="/#">
                     <FontAwesomeIcon
                       icon={faInstagram}
                       beat

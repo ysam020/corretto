@@ -13,6 +13,7 @@ function RobustaComponent() {
       if (tagData.tag.includes(tagItem)) {
         return tagData;
       }
+      return false;
     });
     setGallery(tagResult);
   };
@@ -81,9 +82,10 @@ function RobustaComponent() {
                 if (val.tag.includes(select)) {
                   return val;
                 }
+                return false;
               })
               .map((value, i) => {
-                const { image, id, title } = value;
+                const { image, title } = value;
 
                 return (
                   <Col

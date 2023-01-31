@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import "./styles/App.css";
 import Home from "./Home";
 import About from "./pages/About";
@@ -17,11 +17,8 @@ import { CartState } from "./context/Context";
 function App() {
   // Cart State
   const {
-    state: { products },
-  } = CartState();
-  const {
     state: { cart },
-    dispatch,
+    // dispatch,
   } = CartState();
 
   // animation on scroll

@@ -1,16 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import Counter from "../../data/Counter";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
 function HomeCounterComponent() {
-  const [data, setData] = useState(Counter);
-
   return (
     <Container fluid className="section-4">
       <Row className="counter-row">
-        {data.map((values, i) => {
+        {Counter.map((values, i) => {
           const { count, counterTitle, counterText } = values;
 
           return (
